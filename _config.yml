@@ -6,7 +6,7 @@
 title: Hexo
 subtitle:
 description:
-author: John Doe
+author: Derek Pan
 language:
 timezone:
 
@@ -71,3 +71,10 @@ deploy:
   type: git
   repo: git@github.com:ustcpxy/ustcpxy.github.io.git
   branch: master
+ 
+org:
+  emacs: '/usr/bin/emacs'
+  common: |
+          #+OPTIONS: toc:nil
+          #+BIND: org-html-postamble \"Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c\"
+  cachedir: './hexo-org-cache/'
