@@ -6,17 +6,17 @@
     <description>Recent content in Posts on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Apr 2018 17:33:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Apr 2018 12:23:00 +0800</lastBuildDate>
     
 	<atom:link href="https://ustcpxy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>基于 hugo 搭建个人博客</title>
-      <link>https://ustcpxy.github.io/posts/%E5%9F%BA%E4%BA%8E-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Tue, 03 Apr 2018 17:33:00 +0800</pubDate>
+      <link>https://ustcpxy.github.io/posts/build-blog-with-hugo/</link>
+      <pubDate>Mon, 23 Apr 2018 12:23:00 +0800</pubDate>
       
-      <guid>https://ustcpxy.github.io/posts/%E5%9F%BA%E4%BA%8E-hugo-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://ustcpxy.github.io/posts/build-blog-with-hugo/</guid>
       <description>本文记录了本博客站点的建立过程。
 Quick Start 在本地快速建立一个 hugo 博客框架。
 sudo apt install hugo cd ~ hugo new site blog-hugo cd blog-hugo git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml git add . git commit  稍后将该项目提交到 github 管理。

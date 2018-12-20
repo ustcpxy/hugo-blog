@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+
+<meta name="generator" content="Hugo 0.47.1" />
+
+<link rel="apple-touch-icon" href="https://ustcpxy.github.io/images/logo.png">
+
+
+<link rel="canonical" href="https://ustcpxy.github.io/posts/build-blog-with-hugo/">
+
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" rel="stylesheet">
+    
+    <title>基于 hugo 搭建个人博客 - My New Hugo Site</title>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    
+    
+    
+<meta name="description" content="本文记录了本博客站点的建立过程。Quick Start 在本地快速建立一个 hugo 博客框架。sudo apt install hugo cd ~ hugo new site blog-hugo cd blog-hugo git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml git add . git commit  稍后将该项目提交到 github 管理。参考官网：Quick StartHost on GitHub 将博客内容部署到 Github Pages 。首先要创建一个项目：ustcpxy.github.io# 将 ustcpxy.github.io 作为子模块添加到 blog 项目 cd ~/blog-hugo git submodule add -b master git@github.com:ustcpxy/ustcpxy.github.io.git public # public 目录是生成的博客站点内容，执行 hugo 命令即可生成  这些步骤是机械化的，可以使用脚本实现一键部署。 在 blog-hugo 项目中创建 deploy.">
+
+<meta property="og:title" content="基于 hugo 搭建个人博客 - My New Hugo Site">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ustcpxy.github.io/posts/build-blog-with-hugo/">
+<meta property="og:image" content="https://ustcpxy.github.io/images/default.png">
+<meta property="og:site_name" content="My New Hugo Site">
+<meta property="og:description" content="本文记录了本博客站点的建立过程。Quick Start 在本地快速建立一个 hugo 博客框架。sudo apt install hugo cd ~ hugo new site blog-hugo cd blog-hugo git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml git add . git commit  稍后将该项目提交到 github 管理。参考官网：Quick StartHost on GitHub 将博客内容部署到 Github Pages 。首先要创建一个项目：ustcpxy.github.io# 将 ustcpxy.github.io 作为子模块添加到 blog 项目 cd ~/blog-hugo git submodule add -b master git@github.com:ustcpxy/ustcpxy.github.io.git public # public 目录是生成的博客站点内容，执行 hugo 命令即可生成  这些步骤是机械化的，可以使用脚本实现一键部署。 在 blog-hugo 项目中创建 deploy.">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="My New Hugo Site">
+<meta name="twitter:url" content="https://ustcpxy.github.io/posts/build-blog-with-hugo/">
+<meta name="twitter:title" content="基于 hugo 搭建个人博客 - My New Hugo Site">
+<meta name="twitter:description" content="本文记录了本博客站点的建立过程。Quick Start 在本地快速建立一个 hugo 博客框架。sudo apt install hugo cd ~ hugo new site blog-hugo cd blog-hugo git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml git add . git commit  稍后将该项目提交到 github 管理。参考官网：Quick StartHost on GitHub 将博客内容部署到 Github Pages 。首先要创建一个项目：ustcpxy.github.io# 将 ustcpxy.github.io 作为子模块添加到 blog 项目 cd ~/blog-hugo git submodule add -b master git@github.com:ustcpxy/ustcpxy.github.io.git public # public 目录是生成的博客站点内容，执行 hugo 命令即可生成  这些步骤是机械化的，可以使用脚本实现一键部署。 在 blog-hugo 项目中创建 deploy.">
+<meta name="twitter:image" content="https://ustcpxy.github.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https://ustcpxy.github.io/"
+    },
+    "headline": "基于 hugo 搭建个人博客 - My New Hugo Site",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://ustcpxy.github.io/images/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2018-04-23T12:23:00JST",
+    "dateModified": "2018-12-20T14:18:06JST",
+    "author": {
+      "@type": "Person",
+      "name": "My New Hugo Site"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "My New Hugo Site",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ustcpxy.github.io/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "本文记录了本博客站点的建立过程。
+Quick Start 在本地快速建立一个 hugo 博客框架。
+sudo apt install hugo cd ~ hugo new site blog-hugo cd blog-hugo git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml git add . git commit  稍后将该项目提交到 github 管理。
+参考官网：Quick Start
+Host on GitHub 将博客内容部署到 Github Pages 。首先要创建一个项目：ustcpxy.github.io
+# 将 ustcpxy.github.io 作为子模块添加到 blog 项目 cd ~/blog-hugo git submodule add -b master git@github.com:ustcpxy/ustcpxy.github.io.git public # public 目录是生成的博客站点内容，执行 hugo 命令即可生成  这些步骤是机械化的，可以使用脚本实现一键部署。 在 blog-hugo 项目中创建 deploy."
+  }
+</script>
+
+
+    <style amp-custom>
+      html { font-size: 18px;}@media (max-width: 768px) { html { font-size: 15px; }}body { font-family: Lato,'Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif; font-size: inherit; margin: 0; color: #263238;}html, body { margin: 0;}a { text-decoration: none; color: #e91e63;}p { margin: 0;}ul,ol { margin: 0; padding: 0;}h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 700;}h1 { font-size: 1.8rem; line-height: 2rem; margin: 1.5rem 0; }h2 { font-size: 1.4rem; line-height: 2rem; margin: 1.5rem 0; }h3 { font-size: 1.2rem; line-height: 1.5rem; margin: 1.5rem 0; }h4, h5, h6 { font-size: 1rem; line-height: 1.5rem; margin: 1.5rem 0; }.clearfix::after { content: ''; display: block; clear: both;}main { display: block;}/* Layouts */.l-header { padding: .5rem 0; margin-bottom: 2rem; border-bottom: 1px dashed #cfd8dc; text-align: center;}.l-footer { font-size: .8rem; padding: 1rem 0; border-top: 1px dashed #cfd8dc;}.l-container { max-width: 42rem; margin: 0 auto; padding: 0 1rem;}/* Parts:logo */.p-logo { font-family: Lobster, cursive;}.p-logo a { color: #000; font-size: 1.6rem; line-height: 2rem;}/* Parts:section */section { border-top: 2px solid #eceff1; padding: 1.5rem 0;}section>header { text-transform: uppercase; font-weight: 700; margin-bottom: 2rem; text-align: center;}section>header span { display: inline-block; background-color: #000; color: #fff; letter-spacing: 3px; font-size: .7rem; padding: .5rem .75rem;}/* Parts:facts */.p-facts { list-style: none; font-size: .8rem; margin-bottom: 1rem;}.p-facts:last-child { margin-bottom: 0;}.p-facts li { display: inline-block; margin-right: .5rem; text-transform: uppercase;}.p-facts li header { margin-bottom: .25rem; font-weight: 700;}.p-facts li header a { color: #000; text-decoration: underline;}.p-facts li li { display: inline-block; margin-right: .5rem;}.p-facts li li::after { content: ',';}.p-facts li li:last-child::after { content: '';}/* Parts:crumb */.p-crumb { list-style: none; margin-bottom: 1rem; font-size: .8rem; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}.p-crumb:last-child { margin-bottom: 0;}.p-crumb li { display: inline;}.p-crumb li::after { content: '›'; margin: 0 .5rem;}.p-crumb li:last-child::after { content: '';}/* Parts:page-title */.p-page-title { margin-bottom: 2rem;}.p-page-title .title { margin-bottom: .5rem;}/* Parts:share */.p-share { margin-bottom: 1.5rem;}.p-share a { display: inline-block; text-align: center; padding: .5rem .5rem; margin-right: .25rem; font-size: .6rem; background-color: #eceff1; font-weight: 700k}.p-share a.ht { color: #00a4de; }.p-share a.fb { color: #3b5998; }.p-share a.tw { color: #1da1f2; }.p-share a.gp { color: #dd4b39; }.p-share a.ln { color: #00c300; }.p-share a.ht::before { content: 'Hatena'; }.p-share a.fb::before { content: 'Facebook'; }.p-share a.tw::before { content: 'Twitter'; }.p-share a.gp::before { content: 'Google+'; }.p-share a.ln::before { content: 'LINE'; }/* Parts:terms */.p-terms { padding-left: 2rem;}/* Parts:paginator */.p-paginator { text-align: center; margin-bottom: 3rem; padding-top: 2rem;}.p-paginator a { display: inline-block; border: 2px solid #eceff1; color: #263238; line-height: 2rem; padding: 0 1rem;}/* Parts:article */.p-articles { list-style: none;}.p-articles>li { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px dashed #cfd8dc;}.p-articles>li:last-child { border-bottom: none; padding-bottom: 0;}.p-articles.thin>li { margin-bottom: 1rem; padding-bottom: 1rem;}article .article-header { display: table-cell; height: 6rem; vertical-align: middle;}article .title { margin: 0; margin-bottom: .5rem; font-size: 1.4rem; line-height: 2rem;}article .title a { color: #000;}article .header-wrapper { margin-bottom: 1.5rem;}article .thumbnail { display: block; background-position: center; background-size: cover; background-image: url(https://ustcpxy.github.io/images/default.jpg); width: 6rem; height: 6rem; border-radius: 50%; box-shadow: 0 0 3px 0 #333 inset; float: left; margin-right: 1rem;}article .summary { margin-bottom: 1.5rem;}article .readmore { text-align: center;}article .readmore a { font-size: .8rem; color: #000; text-decoration: underline;}article.li.sm .header-wrapper { margin-bottom: 0;}.article-body h2 { padding: 1rem 0; border-bottom: 2px solid #eceff1;}.article-body h2:first-child { margin-top: 0; }.article-body h3 { color: #cddc39;}.article-body h4 { border-left: solid .25rem #cddc39; padding: 0 .5rem;}.article-body p { margin: 1.5rem 0; line-height: 1.5rem;}.article-body a { text-decoration: underline;}.article-body ul,.article-body ol { padding-left: 1.5rem;}.article-body code { display: inline-block; font-family: Menlo, consolas, monospace; background-color: #eceff1; font-size: .8rem; padding: 0 .5rem; line-height: 1.5rem;}.article-body pre { margin: 1.5rem 0; padding: 1.5rem; font-size: .8rem; background-color: #263238; color: #fff; overflow: auto;}.article-body pre code { background-color: transparent;}.article-body blockquote { margin: 1.5rem 0; padding: .5rem 0; font-size: .8rem; border-top: 1px solid #eceff1; border-bottom: 1px solid #eceff1; color: #607d8b;}.article-body blockquote p { margin: .5rem 0; line-height: 1rem;}.article-body strong { box-shadow: 0 -.5rem 0 0 #f06292 inset;}.article-body em { font-style: normal; font-weight: 700; color: #ff5722;}.article-body figure { margin: 1.5rem -2rem; }.article-body figure.left,.article-body figure.right { width: 15rem; height: 12rem; margin-top: 0; margin-left: 0; margin-right: 0;}.article-body figure.left { float: left; margin-right: 1rem; margin-left: -2rem; }.article-body figure.right { float: right; margin-left: 1rem; margin-right: -2rem; }@media (max-width: 768px) { .article-body figure { margin: 1.5rem -1rem; } .article-body figure.left, .article-body figure.right { float: none; margin: 0 -1rem; width: auto; height: auto; }}.article-body figcaption { padding: .5rem 0; font-size: .8rem; text-align: center;}.article-body figcaption a { color: #263238;}
+
+      
+    </style>
+  </head>
+
+  <body>
+    
+    
+    
+
+    <header class="l-header">
+      <div class="l-container">
+        <div class="h-logo p-logo">
+          <a href="https://ustcpxy.github.io/" class="h-logo">My New Hugo Site</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      
+<div class="l-container">
+  <article class="single article-9011ccde6041ed6d5705afd25af4d57a">
+  <div class="header-wrapper">
+    <a href="https://ustcpxy.github.io/posts/build-blog-with-hugo/" class="thumbnail" title="基于 hugo 搭建个人博客"></a>
+    <header class="article-header">
+      <div class="clearfix">
+        <h1 class="title">基于 hugo 搭建个人博客</h1>
+        <ul class="p-facts">
+          <li><time datetime="2018-12-20T14:18:06JST">Dec 20, 2018</time></li>
+          <li><a href="https://ustcpxy.github.io/posts/">posts</a></li>
+          
+        </ul>
+      </div>
+    </header>
+  </div>
+
+  <aside class="p-share">
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f&title=%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow"></a>
+  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f&t=%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"></a>
+  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f&text=%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"></a>
+  <a href="https://plus.google.com/share?url=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"></a>
+  <a href="http://line.me/R/msg/text/?%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2 https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"></a>
+</aside>
+
+
+  <div class="article-body">
+
+<p>本文记录了本博客站点的建立过程。</p>
+
+<h2 id="quick-start">Quick Start</h2>
+
+<p>在本地快速建立一个 <code>hugo</code> 博客框架。</p>
+
+<pre><code class="language-sh">sudo apt install hugo
+cd ~
+hugo new site blog-hugo
+cd blog-hugo
+git init
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
+git add .
+git commit
+
+</code></pre>
+
+<p>稍后将该项目提交到 <code>github</code> 管理。</p>
+
+<p>参考官网：<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a></p>
+
+<h2 id="host-on-github">Host on GitHub</h2>
+
+<p>将博客内容部署到 <a href="https://pages.github.com/">Github Pages</a> 。首先要创建一个项目：ustcpxy.github.io</p>
+
+<pre><code class="language-sh"># 将 ustcpxy.github.io 作为子模块添加到 blog 项目
+cd ~/blog-hugo
+git submodule add -b master git@github.com:ustcpxy/ustcpxy.github.io.git public
+
+# public 目录是生成的博客站点内容，执行 hugo 命令即可生成
+
+</code></pre>
+
+<p>这些步骤是机械化的，可以使用脚本实现一键部署。
+在 blog-hugo 项目中创建 <code>deploy.sh</code> 文件并赋予可执行权限。
+执行命令 <code>./deploy.sh</code> 即可将博客内容发布到 github pages。</p>
+
+<pre><code class="language-sh">#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# Build the project.
+hugo # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+</code></pre>
+
+<p>参考官网：<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">https://gohugo.io/hosting-and-deployment/hosting-on-github/</a></p>
+
+<h2 id="howto-post">HowTo Post</h2>
+
+<p>使用 Emacs Orgmode + <strong>ox-hugo</strong></p>
+
+<p>下一篇将介绍具体用法。</p>
+</div>
+
+  <aside class="p-share">
+  <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f&title=%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow"></a>
+  <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f&t=%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"></a>
+  <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f&text=%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"></a>
+  <a href="https://plus.google.com/share?url=https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f" title="Google Plusでシェア" class="gp" target="_blank" rel="nofollow"></a>
+  <a href="http://line.me/R/msg/text/?%e5%9f%ba%e4%ba%8e%20hugo%20%e6%90%ad%e5%bb%ba%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2 https%3a%2f%2fustcpxy.github.io%2fposts%2fbuild-blog-with-hugo%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"></a>
+</aside>
+
+
+  <footer class="article-footer">
+    <section>
+      <ol class="p-crumb">
+        <li><a href="https://ustcpxy.github.io/">My New Hugo Site</a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://ustcpxy.github.io/posts/" itemprop="url"><span itemprop="title">posts</span></a></li>
+        
+        <li>基于 hugo 搭建个人博客</li>
+      </ol>
+
+      
+      
+      
+      
+      
+      
+    </section>
+  </footer>
+</article>
+
+
+
+  
+  
+</div>
+
+
+    </main>
+
+    
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p><span class="h-logo">&copy; My New Hugo Site</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_aglaus" class="h-logo">Aglaus</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <a href="#" class="p-movetop" title="ページ上部へ戻る" rel="nofollow"></a>
+  </body>
+</html>
+
