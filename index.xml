@@ -1,29 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>My New Hugo Site</title>
-    <link>https://ustcpxy.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 23 Apr 2018 12:23:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://ustcpxy.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>基于 hugo 搭建个人博客</title>
-      <link>https://ustcpxy.github.io/posts/build-blog-with-hugo/</link>
-      <pubDate>Mon, 23 Apr 2018 12:23:00 +0800</pubDate>
-      
-      <guid>https://ustcpxy.github.io/posts/build-blog-with-hugo/</guid>
-      <description>本文记录了本博客站点的建立过程。
-Quick Start 在本地快速建立一个 hugo 博客框架。
-sudo apt install hugo cd ~ hugo new site blog-hugo cd blog-hugo git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &amp;quot;ananke&amp;quot;&#39; &amp;gt;&amp;gt; config.toml git add . git commit  稍后将该项目提交到 github 管理。
-参考官网：Quick Start
-Host on GitHub 将博客内容部署到 Github Pages 。首先要创建一个项目：ustcpxy.github.io
-# 将 ustcpxy.github.io 作为子模块添加到 blog 项目 cd ~/blog-hugo git submodule add -b master git@github.com:ustcpxy/ustcpxy.github.io.git public # public 目录是生成的博客站点内容，执行 hugo 命令即可生成  这些步骤是机械化的，可以使用脚本实现一键部署。 在 blog-hugo 项目中创建 deploy.</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>我的全新 Hugo 网站</title>
+        <link>https://ustcpxy.github.io/</link>
+        <description>我的全新 Hugo 网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 23 Apr 2018 12:23:00 &#43;0800</lastBuildDate>
+            <atom:link href="https://ustcpxy.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>基于hugo搭建个人博客</title>
+    <link>https://ustcpxy.github.io/posts/build-blog-with-hugo/</link>
+    <pubDate>Mon, 23 Apr 2018 12:23:00 &#43;0800</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://ustcpxy.github.io/posts/build-blog-with-hugo/</guid>
+    <description><![CDATA[本文记录了本博客站点的建立过程。 Quick Start在本地快速建立一个 hugo 博客框架。 sudo apt install hugo cd ~ hugo new site blog-hugo cd blog-hugo git init git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml git add . git commit 稍后将]]></description>
+</item></channel>
 </rss>
