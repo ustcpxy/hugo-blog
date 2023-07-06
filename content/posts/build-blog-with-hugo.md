@@ -21,8 +21,8 @@ cd ~
 hugo new site blog-hugo
 cd blog-hugo
 git init
-git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
-echo 'theme = "ananke"' >> config.toml
+git submodule add https://github.com/HEIGE-PCloud/DoIt.git themes/DoIt
+echo 'theme = "DoIt"' >> config.toml
 git add .
 git commit
 
