@@ -174,7 +174,7 @@ theme = "DoIt"
       # Gitalk 评论系统设置
       [params.page.comment.gitalk]
         # DoIt 新增 | 0.1.1
-        enable = true
+        enable = false
         owner = "ustcpxy"
         repo = "ustcpxy.github.io"
         clientId = "8727d05a651527e8a513"
@@ -239,13 +239,13 @@ theme = "DoIt"
         enable = false
       # DoIt 新增 | 0.2.5 Utterances 评论系统设置
       [params.page.comment.utterances]
-        enable = false
+        enable = true
         # owner/repo
-        repo = ""
-        issueTerm = "pathname"
+        repo = "ustcpxy/ustcpxy.github.io"
+        issueTerm = "title"
         label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
+        #lightTheme = "github-light"
+        #darkTheme = "github-dark"
       # DoIt 新增 | 0.2.12 Twikoo 评论系统设置
       [params.page.comment.twikoo]
         enable = false
